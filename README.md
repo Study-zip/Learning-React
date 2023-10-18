@@ -12,9 +12,9 @@ This repository is a learning project for getting started with React.
 - 승패 알림
 - 게임 히스토리 저장 및 확인
 
-**2️⃣ Food Search Form (바닐라 JS ~ing)**
+**2️⃣ Food Search Form (바닐라 JS => React)**
 
-MVC 패턴을 사용하여 Vanilla JS로 먼저 검색 화면를 구현해본 뒤 React로 바꿔보는 프로젝트
+MVC 패턴을 사용하여 Vanilla JS로 먼저 검색 화면를 구현해본 뒤 React로 바꿔보는 프로젝트 (~ing)
 
 - 검색 창
 - 검색어에 대한 검색 결과
