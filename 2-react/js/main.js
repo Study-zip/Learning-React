@@ -19,7 +19,13 @@ class App extends React.Component {
       searchResult: [],
       submitted: false,
       selectedTab: TabType.KEYWORD,
+      keywordList: [],
     };
+  }
+
+  componentDidMount() {
+    const keywordList = store.getKeywordList();
+    this.setState({ keywordList });
   }
 
   handleSubmit(event) {
@@ -29,7 +35,7 @@ class App extends React.Component {
 
   search(searchKeyword) {
     const searchResult = store.search(searchKeyword);
-    this.setState({ searchResult, submitted: true });
+    this.setState({ searchKeyword, searchResult, submitted: true });
   }
 
   handleReset() {
@@ -82,6 +88,19 @@ class App extends React.Component {
         <div className="empty-box">검색 결과가 없습니다.</div>
       );
 
+    const keywordList = (
+      <ul className="list">
+        {this.state.keywordList.map(({ id, keyword }, index) => {
+          return (
+            <li key={id} onClick={() => this.search(keyword)}>
+              <span className="number">{index + 1}</span>
+              <span>{keyword}</span>
+            </li>
+          );
+        })}
+      </ul>
+    );
+
     const tabs = (
       <>
         <ul className="tabs">
@@ -97,7 +116,7 @@ class App extends React.Component {
             );
           })}
         </ul>
-        {this.state.selectedTab === TabType.KEYWORD && <>TODO: 추천 검색어</>}
+        {this.state.selectedTab === TabType.KEYWORD && keywordList}
         {this.state.selectedTab === TabType.HISTORY && <>TODO: 최근 검색어</>}
       </>
     );
