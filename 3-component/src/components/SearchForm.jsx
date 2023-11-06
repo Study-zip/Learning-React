@@ -3,7 +3,7 @@ import React from "react";
 const SearchForm = ({ value, onChange, onSubmit, onReset }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(this.state.searchKeyword);
+    onSubmit(value);
   };
 
   const handleReset = () => {
@@ -23,9 +23,7 @@ const SearchForm = ({ value, onChange, onSubmit, onReset }) => {
         value={value}
         onChange={handleChangeInput}
       />
-      {value.length > 0 && (
-        <button type="reset" className="btn-reset"></button>
-      )}
+      {value.length > 0 && <button type="reset" className="btn-reset"></button>}
     </form>
   );
 };
