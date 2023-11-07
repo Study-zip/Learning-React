@@ -5,6 +5,7 @@ import SearchResult from "./components/SearchResult";
 import store from "./store";
 import Tabs, { TabType } from "./components/Tabs";
 import KeywordList from "./components/KeywordList";
+import HistoryList from "./components/HistoryList";
 
 export default class App extends React.Component {
   constructor() {
@@ -68,7 +69,9 @@ export default class App extends React.Component {
                 {selectedTab === TabType.KEYWORD && (
                   <KeywordList onClick={(keyword) => this.search(keyword)} />
                 )}
-                {selectedTab === TabType.HISTORY && <>TODO: 최근검색어 목록</>}
+                {selectedTab === TabType.HISTORY && (
+                  <HistoryList onClick={(keyword) => this.search(keyword)} />
+                )}
               </>
             )}
           </div>
