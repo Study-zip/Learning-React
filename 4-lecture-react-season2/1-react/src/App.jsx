@@ -1,6 +1,7 @@
 import Title from "./components/Title";
 import ProductItem from "./components/ProductItem";
 import Navbar from "./components/Navbar";
+import Page from "./components/Page";
 
 const fakeProduct = {
   id: "CACDA421",
@@ -11,21 +12,13 @@ const fakeProduct = {
 
 const App = () => (
   <div className="ProductPage">
-    <div className="Page">
-      <header>
-        <Title>메뉴목록</Title>
-      </header>
-      <main>
-        <ul>
-          <li>
-            <ProductItem product={fakeProduct} />
-          </li>
-        </ul>
-      </main>
-      <footer>
-        <Navbar />
-      </footer>
-    </div>
+    <Page header={<Title>메뉴목록</Title>} footer={<Navbar />}>
+      <ul>
+        <li>
+          <ProductItem product={fakeProduct} />
+        </li>
+      </ul>
+    </Page>
   </div>
 );
 
