@@ -1,3 +1,4 @@
+import Title from "./components/Title";
 import ProductItem from "./components/ProductItem";
 
 const fakeProduct = {
@@ -11,7 +12,7 @@ const App = () => (
   <div className="ProductPage">
     <div className="Page">
       <header>
-        <h1>메뉴목록</h1>
+        <Title>메뉴목록</Title>
       </header>
       <main>
         <ul>
