@@ -14,14 +14,18 @@ This repository is a learning project for getting started with React.
 
 **2️⃣ Food Search Form (바닐라 JS => React)**
 
-MVC 패턴을 사용하여 Vanilla JS로 먼저 검색 화면를 구현해본 뒤 React로 바꿔보는 프로젝트 (~ing)
+MVC 패턴을 사용하여 Vanilla JS로 먼저 검색 화면를 구현해본 뒤 React로 바꿔보는 프로젝트
+
+`pnpm`, `vite`, `babel` 사용
 
 - 검색 창
 - 검색어에 대한 검색 결과
 - 인기 검색어 순위
 - 최근 검색어 목록
 
-**2️3️⃣ Delivery Application with React Hook**
+**3️⃣ Delivery Application with React Hook**
+
+`npm`, `babel`, `webpack` 사용
 
 - 리액트 컴포넌트 (React Component) 설계 기법
 - 리액트 고급 주제와 활용
