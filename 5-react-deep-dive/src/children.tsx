@@ -27,3 +27,5 @@ function TextOrHeading({
     children
   );
 }
+
+export default { TextOrHeading };
