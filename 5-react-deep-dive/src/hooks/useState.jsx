@@ -34,7 +34,7 @@ const MyReact = function () {
   }
 
   // 실제 useState를 사용하는 컴포넌트
-  function Component() {
-    const [value, setValue] = useState(0);
-  }
+  // function Component() {
+  //   const [value, setValue] = useState(0);
+  // }
 };
