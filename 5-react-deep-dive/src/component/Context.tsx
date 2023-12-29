@@ -8,8 +8,10 @@ type Counter = {
 const CounterContext = createContext<Counter | undefined>(undefined);
 // createContext : context를 생성하는 데에 사용. Provider와 Consumer를 갖는 객체를 반환한다.
 class CounterComponent extends Component {
-  render() { // Provider로 주입된 상태를 CounterComponent(자식의 자식)에서 사용 중
-    return ( // Consumer는 context값을 소비하는 데 사용. 현재 context 값을 받아와 사용할 수 있다.
+  render() {
+    // Provider로 주입된 상태를 CounterComponent(자식의 자식)에서 사용 중
+    return (
+      // Consumer는 context값을 소비하는 데 사용. 현재 context 값을 받아와 사용할 수 있다.
       <CounterContext.Consumer>
         {(state) => <p>{state?.count}</p>}
       </CounterContext.Consumer>
