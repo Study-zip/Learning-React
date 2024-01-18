@@ -1,11 +1,8 @@
 import React from "react";
+import Event from "./component/Event";
 
 function App() {
-  return (
-    <div>
-      <h1>This is App Component</h1>
-    </div>
-  );
+  return <Event />;
 }
 
 export default App;
